@@ -1,4 +1,5 @@
 import React from 'react';
+import Search from './components/TodoComponents/Search';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
@@ -24,6 +25,7 @@ class App extends React.Component {
     this.state = {
       todos: starterTasks,
       newTask: '',
+      searchTerm: '',
     };
   }
 
@@ -63,11 +65,20 @@ class App extends React.Component {
     }))
   }
 
+  setSearchTerm = (newSearchTerm) => {
+    this.setState(currentState => ({
+      searchTerm: newSearchTerm
+    }))
+  }
+
   render() {
     return (
       <div className='App'>
         <h2>Welcome to ToDone!</h2>
-        <TodoList todos={this.state.todos} 
+        <Search   searchForTasks={this.searchForTasks}
+                  searchTerm={this.state.searchTerm} 
+                  setSearchTerm={this.setSearchTerm} />
+        <TodoList todos={this.state.todos.filter(todo => todo.task.toLowerCase().includes(this.state.searchTerm.toLowerCase()))} 
                   markCompleted={this.markCompleted} />
         <TodoForm addTodo={this.addTodo} 
                   clearCompleted={this.clearCompleted} 
