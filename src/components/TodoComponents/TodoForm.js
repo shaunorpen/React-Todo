@@ -3,7 +3,7 @@ import React from 'react';
 export default class TodoForm extends React.Component {
     render() {
         return (
-            <div>
+            <div className='new-task-form'>
                 <div>
                     <input  id='newTask' 
                             value={this.props.newTaskDescription} 

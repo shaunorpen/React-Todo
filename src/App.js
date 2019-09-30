@@ -2,6 +2,9 @@ import React from 'react';
 import TodoList from './components/TodoComponents/TodoList';
 import TodoForm from './components/TodoComponents/TodoForm';
 
+import './css/reset.css';
+import './css/App.css';
+
 const starterTasks = [
   {
     task: 'Organize Garage',
@@ -62,8 +65,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      <div className='App'>
+        <h2>Welcome to ToDone!</h2>
         <TodoList todos={this.state.todos} 
                   markCompleted={this.markCompleted} />
         <TodoForm addTodo={this.addTodo} 

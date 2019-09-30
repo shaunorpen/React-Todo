@@ -1,0 +1,52 @@
+:root {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+.App {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 50px;
+    border: 1px solid grey;
+}
+
+.App h2 {
+    font-size: 5rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.App .tasks .task {
+    font-size: 1.6rem;
+    background: lightgrey;
+    margin: 10px 0px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-content: baseline;
+}
+
+.App .new-task-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 30px;
+    border: 1px solid grey;
+}
+
+.App .new-task-form div {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.App .new-task-form input {
+    font-size: 1.6rem;
+    width: 50%;
+}
+
+.App .new-task-form button {
+    font-size: 1.6rem;
+    border-radius: 10px;
+    width: 150px;
+    margin: 0 10px;
+}
