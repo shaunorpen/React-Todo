@@ -10,6 +10,7 @@ export default class TodoList extends React.Component {
                                 key             =   {todo.id} 
                                 task            =   {todo.task} 
                                 id              =   {todo.id} 
+                                completed       =   {todo.completed}
                                 markCompleted   =   {this.props.markCompleted} 
                             />;
                 }) }
