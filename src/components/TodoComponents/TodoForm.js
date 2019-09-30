@@ -7,7 +7,9 @@ export default class TodoForm extends React.Component {
                 <div>
                     <input  id='newTask' 
                             value={this.props.newTaskDescription} 
-                            onChange={e => this.props.setNewTaskDescription(document.querySelector('#newTask').value)}></input>
+                            onChange={e => this.props.setNewTaskDescription(document.querySelector('#newTask').value)}
+                            placeholder='Input a new task'
+                    ></input>
                 </div>
                 <div>
                     <button onClick={e => this.props.addTodo(document.querySelector('#newTask').value)} >Add to List</button>
